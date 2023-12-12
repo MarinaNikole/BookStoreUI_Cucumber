@@ -1,0 +1,9 @@
+steps\DetailedInformation.class
+steps\LoginSteps.class
+steps\BookStoreSteps.class
+steps\SideBarSteps.class
+steps\BaseSteps.class
+steps\ProfileSteps.class
+runners\RunnerTest.class
+hooks\Hooks.class
+steps\RegisterSteps.class

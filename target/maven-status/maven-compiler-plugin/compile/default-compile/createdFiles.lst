@@ -1,0 +1,6 @@
+pages\BookStorePage.class
+pages\BookDetailedInformation.class
+pages\RegisterPage.class
+pages\LoginPage.class
+pages\ProfilePage.class
+pages\SideBarPage.class

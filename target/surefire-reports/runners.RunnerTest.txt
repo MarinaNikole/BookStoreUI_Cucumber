@@ -1,0 +1,128 @@
+-------------------------------------------------------------------------------
+Test set: runners.RunnerTest
+-------------------------------------------------------------------------------
+Tests run: 243, Failures: 12, Errors: 0, Skipped: 25, Time elapsed: 508.353 s <<< FAILURE! - in runners.RunnerTest
+Scenario: Add one book to the User`s Profile.And I see the Profile Book Catalog empty  Time elapsed: 0.02 s  <<< FAILURE!
+List size mismatch: expected: = 0, actual: 1, collection: [class ='rt-tr-group'].filter(not empty: attribute value="" and exact text "")
+Screenshot: file:/C:/Users/alexd/Projetos/BookStore_Cucumber/build/reports/tests/1702286201966.0.png
+Page source: file:/C:/Users/alexd/Projetos/BookStore_Cucumber/build/reports/tests/1702286201966.0.html
+Timeout: 4 s.
+	at com.codeborne.selenide.collections.CollectionSizeCondition.fail(CollectionSizeCondition.java:40)
+	at com.codeborne.selenide.collections.ListSize.fail(ListSize.java:6)
+	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:200)
+	at com.codeborne.selenide.ElementsCollection.should(ElementsCollection.java:145)
+	at com.codeborne.selenide.ElementsCollection.shouldHave(ElementsCollection.java:119)
+	at steps.ProfileSteps.iSeeTheProfileBookCatalogEmpty(ProfileSteps.java:16)
+	at ✽.And I see the Profile Book Catalog empty(AddAndDeleteAllBooks.feature:11)
+
+Scenario: Add one book to the User`s Profile  Time elapsed: 0.02 s  <<< FAILURE!
+List size mismatch: expected: = 0, actual: 1, collection: [class ='rt-tr-group'].filter(not empty: attribute value="" and exact text "")
+Screenshot: file:/C:/Users/alexd/Projetos/BookStore_Cucumber/build/reports/tests/1702286201966.0.png
+Page source: file:/C:/Users/alexd/Projetos/BookStore_Cucumber/build/reports/tests/1702286201966.0.html
+Timeout: 4 s.
+	at com.codeborne.selenide.collections.CollectionSizeCondition.fail(CollectionSizeCondition.java:40)
+	at com.codeborne.selenide.collections.ListSize.fail(ListSize.java:6)
+	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:200)
+	at com.codeborne.selenide.ElementsCollection.should(ElementsCollection.java:145)
+	at com.codeborne.selenide.ElementsCollection.shouldHave(ElementsCollection.java:119)
+	at steps.ProfileSteps.iSeeTheProfileBookCatalogEmpty(ProfileSteps.java:16)
+	at ✽.And I see the Profile Book Catalog empty(AddAndDeleteAllBooks.feature:11)
+
+Scenario: Sort books by title.Then I see the books sorted in A_Z order  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[Designing Evolvable Web APIs with ASP.NET, Eloquent JavaScript, Second Edition, Git Pocket Guide, Learning JavaScript Design Patterns, Programming JavaScript Applications, Speaking JavaScript, Understanding ECMAScript 6, You Don't Know JS]> but was:<[Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.BookStoreSteps.iSeeTheBooksSortedInA_ZOrder(BookStoreSteps.java:87)
+	at ✽.Then I see the books sorted in A_Z order(BookStoreSortTest.feature:10)
+
+Scenario: Sort books by title  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[Designing Evolvable Web APIs with ASP.NET, Eloquent JavaScript, Second Edition, Git Pocket Guide, Learning JavaScript Design Patterns, Programming JavaScript Applications, Speaking JavaScript, Understanding ECMAScript 6, You Don't Know JS]> but was:<[Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.BookStoreSteps.iSeeTheBooksSortedInA_ZOrder(BookStoreSteps.java:87)
+	at ✽.Then I see the books sorted in A_Z order(BookStoreSortTest.feature:10)
+
+Scenario: Sort books by title.Then I see the books sorted in Z_A order  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[You Don't Know JS, Understanding ECMAScript 6, Speaking JavaScript, Programming JavaScript Applications, Learning JavaScript Design Patterns, Git Pocket Guide, Eloquent JavaScript, Second Edition, Designing Evolvable Web APIs with ASP.NET]> but was:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.BookStoreSteps.iSeeTheBooksSortedInZ_AOrder(BookStoreSteps.java:100)
+	at ✽.Then I see the books sorted in Z_A order(BookStoreSortTest.feature:15)
+
+Scenario: Sort books by title  Time elapsed: 0.002 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[You Don't Know JS, Understanding ECMAScript 6, Speaking JavaScript, Programming JavaScript Applications, Learning JavaScript Design Patterns, Git Pocket Guide, Eloquent JavaScript, Second Edition, Designing Evolvable Web APIs with ASP.NET]> but was:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.BookStoreSteps.iSeeTheBooksSortedInZ_AOrder(BookStoreSteps.java:100)
+	at ✽.Then I see the books sorted in Z_A order(BookStoreSortTest.feature:15)
+
+Scenario: Successful logout.And I see the Profile Book Catalog empty  Time elapsed: 0.002 s  <<< FAILURE!
+List size mismatch: expected: = 0, actual: 1, collection: [class ='rt-tr-group'].filter(not empty: attribute value="" and exact text "")
+Screenshot: file:/C:/Users/alexd/Projetos/BookStore_Cucumber/build/reports/tests/1702286487685.1.png
+Page source: file:/C:/Users/alexd/Projetos/BookStore_Cucumber/build/reports/tests/1702286487685.1.html
+Timeout: 4 s.
+	at com.codeborne.selenide.collections.CollectionSizeCondition.fail(CollectionSizeCondition.java:40)
+	at com.codeborne.selenide.collections.ListSize.fail(ListSize.java:6)
+	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:200)
+	at com.codeborne.selenide.ElementsCollection.should(ElementsCollection.java:145)
+	at com.codeborne.selenide.ElementsCollection.shouldHave(ElementsCollection.java:119)
+	at steps.ProfileSteps.iSeeTheProfileBookCatalogEmpty(ProfileSteps.java:16)
+	at ✽.And I see the Profile Book Catalog empty(LogotTest.feature:11)
+
+Scenario: Successful logout  Time elapsed: 0.003 s  <<< FAILURE!
+List size mismatch: expected: = 0, actual: 1, collection: [class ='rt-tr-group'].filter(not empty: attribute value="" and exact text "")
+Screenshot: file:/C:/Users/alexd/Projetos/BookStore_Cucumber/build/reports/tests/1702286487685.1.png
+Page source: file:/C:/Users/alexd/Projetos/BookStore_Cucumber/build/reports/tests/1702286487685.1.html
+Timeout: 4 s.
+	at com.codeborne.selenide.collections.CollectionSizeCondition.fail(CollectionSizeCondition.java:40)
+	at com.codeborne.selenide.collections.ListSize.fail(ListSize.java:6)
+	at com.codeborne.selenide.ElementsCollection.waitUntil(ElementsCollection.java:200)
+	at com.codeborne.selenide.ElementsCollection.should(ElementsCollection.java:145)
+	at com.codeborne.selenide.ElementsCollection.shouldHave(ElementsCollection.java:119)
+	at steps.ProfileSteps.iSeeTheProfileBookCatalogEmpty(ProfileSteps.java:16)
+	at ✽.And I see the Profile Book Catalog empty(LogotTest.feature:11)
+
+Scenario: Sort books by title.Then I see the books sorted in A_Z order  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[Designing Evolvable Web APIs with ASP.NET, Eloquent JavaScript, Second Edition, Git Pocket Guide, Learning JavaScript Design Patterns, Programming JavaScript Applications, Speaking JavaScript, Understanding ECMAScript 6, You Don't Know JS]> but was:<[Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.BookStoreSteps.iSeeTheBooksSortedInA_ZOrder(BookStoreSteps.java:87)
+	at ✽.Then I see the books sorted in A_Z order(RegisteredUserSort.feature:17)
+
+Scenario: Sort books by title  Time elapsed: 0.004 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[Designing Evolvable Web APIs with ASP.NET, Eloquent JavaScript, Second Edition, Git Pocket Guide, Learning JavaScript Design Patterns, Programming JavaScript Applications, Speaking JavaScript, Understanding ECMAScript 6, You Don't Know JS]> but was:<[Git Pocket Guide, Learning JavaScript Design Patterns, Designing Evolvable Web APIs with ASP.NET, Speaking JavaScript, You Don't Know JS, Programming JavaScript Applications, Eloquent JavaScript, Second Edition, Understanding ECMAScript 6]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.BookStoreSteps.iSeeTheBooksSortedInA_ZOrder(BookStoreSteps.java:87)
+	at ✽.Then I see the books sorted in A_Z order(RegisteredUserSort.feature:17)
+
+Scenario: Sort books by title.Then I see the books sorted in Z_A order  Time elapsed: 0.001 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[You Don't Know JS, Understanding ECMAScript 6, Speaking JavaScript, Programming JavaScript Applications, Learning JavaScript Design Patterns, Git Pocket Guide, Eloquent JavaScript, Second Edition, Designing Evolvable Web APIs with ASP.NET]> but was:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.BookStoreSteps.iSeeTheBooksSortedInZ_AOrder(BookStoreSteps.java:100)
+	at ✽.Then I see the books sorted in Z_A order(RegisteredUserSort.feature:24)
+
+Scenario: Sort books by title  Time elapsed: 0.003 s  <<< FAILURE!
+java.lang.AssertionError: expected:<[You Don't Know JS, Understanding ECMAScript 6, Speaking JavaScript, Programming JavaScript Applications, Learning JavaScript Design Patterns, Git Pocket Guide, Eloquent JavaScript, Second Edition, Designing Evolvable Web APIs with ASP.NET]> but was:<[Understanding ECMAScript 6, Eloquent JavaScript, Second Edition, Programming JavaScript Applications, You Don't Know JS, Speaking JavaScript, Designing Evolvable Web APIs with ASP.NET, Learning JavaScript Design Patterns, Git Pocket Guide]>
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at steps.BookStoreSteps.iSeeTheBooksSortedInZ_AOrder(BookStoreSteps.java:100)
+	at ✽.Then I see the books sorted in Z_A order(RegisteredUserSort.feature:24)
+
