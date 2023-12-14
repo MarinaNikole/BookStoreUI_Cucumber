@@ -27,4 +27,20 @@ public class DetailedInformation extends BaseSteps{
     public void iConfirmTheAlertMessage() {
       switchTo().alert().accept();
     }
+
+    @When("^I follow book website link$")
+    public void iFollowBookWebsiteLink() {
+        bookDetailedInformation.website.scrollTo().shouldBe(visible).click();
+    }
+
+    @Then("^I am on the \"([^\"]*)\" book page$")
+    public void iAmOnTheBookPage(String bookTitle)  {
+        switchTo().window(1);
+        $x("//*[text()='" + bookTitle + "']").scrollIntoView(true).shouldBe(visible).click();
+    }
+
+    @Then("^I am on the Book Detailed Information page$")
+    public void iAmOnTheBookDetailedInformationPage() {
+        bookDetailedInformation.ISBN.shouldBe(visible);
+    }
 }

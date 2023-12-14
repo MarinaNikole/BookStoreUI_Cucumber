@@ -16,4 +16,3 @@
         And I enter "123Neil321&" password in the Password input field
         And I click the Register button
         Then I see on the Login page "Please verify reCaptcha to register!" message
-

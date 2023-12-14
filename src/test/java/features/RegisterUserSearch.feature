@@ -29,16 +29,3 @@ Feature: Search
     Then I see only the books by publisher "No Starch Press" in Book Store Catalog
 
 
-
-
-
-#  @by_Title
-#  Scenario: Search book by title
-#    When I input the title "You Don't Know JS" in the Profile search input field
-#    Then I see the book "You Don't Know JS" in the Profile Book Catalog
-#    And I see that the Profile Book Catalog has only one book.
-#
-#  @by_Publisher
-#  Scenario: Search book by publisher
-#    When I input the publisher "O'Reilly Media" in the Profile search input field
-#    Then I see only the books by publisher "O'Reilly Media" in the Profile Book Catalog

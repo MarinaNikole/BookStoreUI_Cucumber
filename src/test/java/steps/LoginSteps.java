@@ -2,7 +2,6 @@ package steps;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -47,26 +46,15 @@ public class LoginSteps extends BaseSteps {
         for (SelenideElement book : profilePage.booksCollection) {
             book.shouldBe(visible);
         }
-        // profilePage.registeredUserName.shouldBe(visible).shouldHave(text(userName));
+
     }
 
-
-//    @Then("^I see the message \"([^\"]*)\" is displayed$")
-//    public void iSeeTheMessageThatIsDisplayed(String errorMessageText) {
-//        loginPage.loginButton.shouldBe(enabled, ofSeconds(10));
-//      loginPage.invalidUsernameAndPasswordMessage.shouldBe(enabled, ofSeconds(15))
-//              .shouldHave(text(errorMessageText));
-//    }
 
     @Then("^I see the message \"([^\"]*)\" is displayed$")
     public void iSeeTheMessageThatIsDisplayed(String expectedMessageText) {
         loginPage.invalidUsernameAndPasswordMessage.shouldBe(visible).shouldHave(text(expectedMessageText));
     }
 
-    @Then("^I see the error message is displayed$")
-    public void iSeeTheErrorMessageIsDisplayed() {
-        loginPage.invalidUsernameAndPasswordMessage.shouldBe(visible).shouldHave(text("Invalid username or password!"));
-    }
 
     @Then("^I see the following message \"([^\"]*)\" is displayed$")
     public void iSeeTheFollowingMessageIsDisplayed(String expectedMessage) {

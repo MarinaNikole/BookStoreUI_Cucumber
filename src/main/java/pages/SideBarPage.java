@@ -7,6 +7,5 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class SideBarPage {
     public SelenideElement loginLink = $(byText("Login"));
-    public SelenideElement bookStoreLink = $(byText("Book Store"));
     public SelenideElement profileLink = $(byText("Profile"));
 }

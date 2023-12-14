@@ -10,12 +10,11 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Selenide.confirm;
 
-public class ProfileSteps extends BaseSteps{
+public class ProfileSteps extends BaseSteps {
     @And("^I see the Profile Book Catalog empty$")
     public void iSeeTheProfileBookCatalogEmpty() {
         profilePage.booksCollection.filter(not(empty)).shouldHave(size(0));
     }
-
 
 
     @When("^I follow the Book Store Link$")
@@ -25,8 +24,8 @@ public class ProfileSteps extends BaseSteps{
 
 
     @Then("^I see the \"([^\"]*)\" book in User`s collection$")
-    public void iSeeTheBookInUserSCollection(String title)  {
-        for(SelenideElement book : profilePage.booksTitleCollection.filter(not(empty))){
+    public void iSeeTheBookInUserSCollection(String title) {
+        for (SelenideElement book : profilePage.booksTitleCollection.filter(not(empty))) {
             book.shouldBe(visible).shouldHave(text(title));
         }
     }
@@ -71,7 +70,7 @@ public class ProfileSteps extends BaseSteps{
     }
 
     @Then("^I see the the message \"([^\"]*)\"$")
-    public void iSeeTheTheMessage(String message)  {
+    public void iSeeTheTheMessage(String message) {
         profilePage.notLogginLabel.shouldBe(visible).shouldHave(text(message));
     }
 
@@ -80,35 +79,4 @@ public class ProfileSteps extends BaseSteps{
         profilePage.deleteAccountButton.scrollTo().shouldBe(visible).click();
     }
 
-
-//
-//    @When("^I input the title \"([^\"]*)\" in the Profile search input field$")
-//    public void iInputTheTitleInTheProfileSearchInputField(String bookTitle)  {
-//       profilePage.searchInputField.scrollTo().shouldBe(visible).setValue(bookTitle);
-//    }
-//
-//    @Then("^I see the book \"([^\"]*)\" in the Profile Book Catalog$")
-//    public void iSeeTheBookInTheProfileBookCatalog(String bookTitle)  {
-//        for (SelenideElement title : bookStorePage.booksTitleCollection.filter(not(empty))) {
-//            title.shouldBe(visible).shouldHave(text(bookTitle));
-//        }
-//    }
-//
-//    @Then("^I see that the Profile Book Catalog has only one book\\.$")
-//    public void iSeeThatTheProfileBookCatalogHasOnlyOneBook() {
-//        int collectionSize = bookStorePage.booksCollection.filter(not(empty)).size();
-//        assertEquals("The expected size of the book catalog does NOT correspond to actual", 1, collectionSize);
-//    }
-//
-//    @When("^I input the publisher \"([^\"]*)\" in the Profile search input field$")
-//    public void iInputThePublisherInTheProfileSearchInputField(String publisher)  {
-//            bookStorePage.searchInputField.shouldBe(visible).setValue(publisher);
-//    }
-//
-//    @Then("^I see only the books by publisher \"([^\"]*)\" in the Profile Book Catalog$")
-//    public void iSeeOnlyTheBooksByPublisherInTheProfileBookCatalog(String publisher)  {
-//        for (SelenideElement pubName : bookStorePage.booksPublisherCollection.filter(not(empty))) {
-//            pubName.shouldBe(visible).shouldHave(text(publisher));
-//        }
-//    }
 }

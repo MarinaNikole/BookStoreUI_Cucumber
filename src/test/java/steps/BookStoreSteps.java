@@ -1,19 +1,15 @@
 package steps;
 
 import com.codeborne.selenide.SelenideElement;
-import cucumber.api.PendingException;
-import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$x;
-import static java.time.Duration.*;
 import static java.util.Collections.reverseOrder;
 import static java.util.Collections.sort;
 import static org.junit.Assert.assertEquals;
@@ -155,5 +151,10 @@ public class BookStoreSteps extends BaseSteps {
     @When("^I click the Login button on the Book Store page$")
     public void iClickTheLoginButtonOnTheBookStorePage() {
         bookStorePage.loginButton.shouldBe(visible).click();
+    }
+
+    @When("^I follow \"([^\"]*)\" book link$")
+    public void iFollowBookLink(int index) {
+        bookStorePage.booksTitleCollection.filter(not(empty)).get(index-1).scrollTo().click();
     }
 }
