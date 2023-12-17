@@ -1,6 +1,5 @@
 @register_bookStoreSearch
-Feature: Search
-
+Feature: Search after login
   Background: I`m in BookStore page
     Given I open Book Store
     When I follow Login Link

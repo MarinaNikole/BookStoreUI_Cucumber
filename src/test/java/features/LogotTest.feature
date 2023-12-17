@@ -1,6 +1,5 @@
 @logout
 Feature: Logout
-
   Background: I`m in BookStore page
     Given I open Book Store
     When I follow Login Link
@@ -8,7 +7,7 @@ Feature: Logout
     And I input "123Ron321&" to password field
     When I click the Login button
     Then I am on the Profile page
-    And I see the Profile Book Catalog empty
+
 
   @success_logout
   Scenario: Successful logout

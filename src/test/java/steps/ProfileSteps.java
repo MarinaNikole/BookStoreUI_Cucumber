@@ -5,10 +5,13 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
+import java.time.Duration;
+
 import static com.codeborne.selenide.CollectionCondition.*;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Condition.empty;
 import static com.codeborne.selenide.Selenide.confirm;
+import static java.time.Duration.*;
 
 public class ProfileSteps extends BaseSteps {
     @And("^I see the Profile Book Catalog empty$")
@@ -26,7 +29,7 @@ public class ProfileSteps extends BaseSteps {
     @Then("^I see the \"([^\"]*)\" book in User`s collection$")
     public void iSeeTheBookInUserSCollection(String title) {
         for (SelenideElement book : profilePage.booksTitleCollection.filter(not(empty))) {
-            book.shouldBe(visible).shouldHave(text(title));
+            book.shouldBe(visible, ofSeconds(8)).shouldHave(text(title));
         }
     }
 

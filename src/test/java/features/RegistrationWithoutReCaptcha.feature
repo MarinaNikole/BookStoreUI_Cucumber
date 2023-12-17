@@ -1,6 +1,5 @@
 @registration
   Feature: Register user
-
     Background: I`m in BookStore page
       Given I open Book Store
 

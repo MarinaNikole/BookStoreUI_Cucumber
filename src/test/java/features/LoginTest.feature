@@ -1,6 +1,5 @@
 @login
 Feature: Login
-
   Background: I`m in BookStore page
     Given I open Book Store
 
@@ -26,7 +25,7 @@ Feature: Login
       | Ronny    | 123Ron321  | Invalid username or password! |
 
   @empty_fields
-  Scenario Outline: Login with invalid data
+  Scenario Outline: Login with empty fields
     When I follow Login Link
     And I input "<username>" to userName field
     And I input "<password>" to password field
